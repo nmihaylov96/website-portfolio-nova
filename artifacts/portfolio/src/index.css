@@ -157,11 +157,11 @@
 
 .animated-blob {
   position: absolute;
-  filter: blur(80px);
+  filter: blur(90px);
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.18;
   border-radius: 50%;
-  animation: float 20s infinite ease-in-out alternate;
+  animation: float 24s infinite ease-in-out alternate;
 }
 
 @keyframes float {
