@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+<div class="cursor-glow"></div>
+<div class="gradient-blob blob-1"></div>
+<div class="gradient-blob blob-2"></div>
+
+<header class="navbar">
+    <div class="logo">NOVA</div>
+
+    <nav>
+        <a href="#work">Work</a>
+        <a href="#case">Case Study</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="nav-btn">Hire Me</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+
+        <p class="tag reveal">PORTFOLIO 2026</p>
+
+        <h1 class="reveal">I build modern web experiences.</h1>
+
+        <p class="subtitle reveal">
+            Clean UI, performance-driven systems and premium frontend experiences
+            that convert visitors into clients.
+        </p>
+
+        <div class="hero-buttons reveal">
+            <button class="primary-btn">View Work</button>
+            <button class="secondary-btn">Contact</button>
+        </div>
+
+        <div class="floating-cards reveal">
+
+            <div class="glass-card">
+                <span class="card-label">EXPERIENCE</span>
+                <h3>3+ yrs</h3>
+                <p>Frontend development with modern UI systems.</p>
+            </div>
+
+            <div class="glass-card">
+                <span class="card-label">PROJECTS</span>
+                <h3>20+</h3>
+                <p>Production-ready websites and interfaces.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECT 1 -->
+<section class="project-section" id="case">
+
+    <div class="project-wrapper reveal">
+
+        <div class="project-preview">
+
+            <div class="project-iframe-wrap">
+                <img src="https://image.thum.io/get/width/1200/crop/630/noanimate/https://www.rolltech-doors.com"
+                     class="project-screenshot">
+            </div>
+
+            <div class="project-floating-card">
+                <span>CASE STUDY</span>
+                <h4>Rolltech Doors</h4>
+                <p>Industrial brand redesign focused on trust and conversion.</p>
+            </div>
+
+        </div>
+
+        <div class="project-info">
+
+            <p class="project-label">FEATURED WORK</p>
+
+            <h2>Premium industrial web experience built for conversion.</h2>
+
+            <p class="project-description">
+                Full redesign and frontend development with focus on performance,
+                clarity and user trust.
+            </p>
+
+            <div class="project-stats">
+                <div class="stat"><h3>+38%</h3><span>Leads</span></div>
+                <div class="stat"><h3>95+</h3><span>Performance</span></div>
+                <div class="stat"><h3>100%</h3><span>Responsive</span></div>
+            </div>
+
+            <div class="project-buttons">
+                <a class="primary-link" href="https://www.rolltech-doors.com" target="_blank">Visit</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECT 2 -->
+<section class="project-section">
+
+    <div class="project-wrapper reveal">
+
+        <div class="project-preview">
+
+            <div class="project-iframe-wrap">
+                <img src="https://image.thum.io/get/width/1200/crop/630/noanimate/https://www.nikolaymihaylovportfolio.com"
+                     class="project-screenshot">
+            </div>
+
+            <div class="project-floating-card">
+                <span>PERSONAL BRAND</span>
+                <h4>Portfolio System</h4>
+                <p>Modern developer portfolio with cinematic UI.</p>
+            </div>
+
+        </div>
+
+        <div class="project-info">
+
+            <p class="project-label">PORTFOLIO</p>
+
+            <h2>High-end personal branding website system.</h2>
+
+            <p class="project-description">
+                Designed to showcase developers, freelancers and creators in a premium way.
+            </p>
+
+            <div class="project-buttons">
+                <a class="primary-link" href="https://www.nikolaymihaylovportfolio.com" target="_blank">Visit</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TECH STACK (NEW CLEAN SECTION) -->
+<section class="bento" id="stack">
+
+    <div class="bento-grid">
+
+        <div class="bento-card reveal">
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JS, animations, UI systems</p>
+        </div>
+
+        <div class="bento-card reveal">
+            <h3>Performance</h3>
+            <p>Optimization, rendering, UX speed tuning</p>
+        </div>
+
+        <div class="bento-card reveal">
+            <h3>Design</h3>
+            <p>Glassmorphism, modern UI, branding</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+
+    <div class="cta-box reveal">
+
+        <h2>Let’s build something premium.</h2>
+
+        <p>
+            I design and develop modern websites that don’t just look good —
+            they convert and perform.
+        </p>
+
+        <button class="primary-btn">Contact Me</button>
+
+    </div>
+
+</section>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const navbar = document.querySelector('.navbar');
+const glow = document.querySelector('.cursor-glow');
+
+window.addEventListener('mousemove', (e) => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
+});
+
+function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+
+    reveals.forEach(el => {
+        if (el.getBoundingClientRect().top < windowHeight - 100) {
+            el.classList.add('active');
+        }
+    });
+
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+</script>
+
+</body>
+</html>

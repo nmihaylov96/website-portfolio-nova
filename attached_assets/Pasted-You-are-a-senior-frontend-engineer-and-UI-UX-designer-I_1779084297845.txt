@@ -1,0 +1,64 @@
+You are a senior frontend engineer and UI/UX designer.
+
+I already have a basic portfolio website with only two files:
+- home.html
+- home.css
+
+The current site is too simple and not visually impressive.
+
+Your task is to completely upgrade it into a ULTRA MODERN, HIGH-END developer portfolio website.
+
+GOAL:
+Create a premium, agency-level portfolio website that showcases my client work in a cinematic, modern and highly interactive way.
+
+IMPORTANT REQUIREMENTS:
+
+1. Design Level:
+- Must look like Awwwards / Framer / Apple-level design
+- Dark futuristic UI with elegant gradients
+- Glassmorphism + soft shadows + subtle neon accents
+- Clean typography (Inter or similar)
+
+2. UX / UI:
+- Smooth scroll animations
+- Scroll reveal effects
+- Hover animations on cards and projects
+- Micro-interactions everywhere
+- Cursor glow or subtle pointer effect (optional but preferred)
+
+3. Structure:
+Must include these sections:
+- Hero section (strong headline, modern CTA)
+- Featured Projects / Case Studies (at least 2 projects, including external websites like rolltech-doors.com)
+- Project showcase cards with images (use placeholders if needed)
+- About / Skills section (clean, minimal, professional)
+- Tech stack section (icons or clean tags)
+- Contact CTA section (modern, conversion focused)
+
+4. Code quality:
+- Only use HTML + CSS + minimal vanilla JS (no frameworks unless necessary)
+- Fully responsive (mobile first)
+- Clean and reusable CSS structure
+- No messy or duplicate code
+- Performance optimized (avoid heavy blur and layout thrashing)
+
+5. Visual quality:
+- High spacing consistency
+- Modern grid layout (bento style allowed)
+- Premium card design with hover depth
+- Subtle animations (no overdoing)
+
+6. Content:
+- Use my projects as real case studies
+- One project must include:
+  https://www.rolltech-doors.com
+- Make it look like a real agency case study presentation
+
+7. Output:
+- Return full working code for:
+  home.html
+  home.css
+- Make sure everything is connected and ready to run immediately
+
+Make the website feel like a PREMIUM PRODUCT, not a template.
+Focus heavily on aesthetics, spacing, typography and modern motion design.
