@@ -162,6 +162,8 @@ const translations: Record<string, Record<Lang, string>> = {
   "work.p2.stat3": { bg: "Lighthouse 95+", en: "Lighthouse 95+" },
   "work.p2.visit": { bg: "Виж живия сайт", en: "Visit Live Site" },
   "work.p2.tags": { bg: "React · Framer Motion · CMS · Branding", en: "React · Framer Motion · CMS · Branding" },
+  "work.p3.label": { bg: "Платформа за недвижими имоти", en: "Real Estate Platform" },
+  "work.p3.desc": { bg: "Премиум луксозна платформа за недвижими имоти, включваща обяви за имоти, галерии с изображения, система за любими и елегантни анимации.", en: "A premium luxury real estate platform featuring property listings, image galleries, favorites system and elegant animations." },
   "work.process.label": { bg: "Процесът", en: "The Process" },
   "work.process.title": { bg: "Как работя", en: "How I work" },
   "work.step1.title": { bg: "Открий", en: "Discover" },
