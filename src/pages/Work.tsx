@@ -55,7 +55,10 @@ export default function Work() {
       {/* background blobs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <div className="animated-blob bg-blue-500/10 w-[500px] h-[500px] top-[-80px] left-[-80px]" />
-        <div className="animated-blob bg-purple-500/10 w-[400px] h-[400px] top-[40%] right-[-100px]" style={{ animationDelay: "-6s" }} />
+        <div
+          className="animated-blob bg-purple-500/10 w-[400px] h-[400px] top-[40%] right-[-100px]"
+          style={{ animationDelay: "-6s" }}
+        />
       </div>
 
       <Navbar />
@@ -103,13 +106,14 @@ export default function Work() {
               }}
               className="group glass-card rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-300"
             >
-              {/* IMAGE FIX */}
+              {/* IMAGE */}
               <div className="relative w-full aspect-[16/10] overflow-hidden bg-black/20">
                 <img
-                  src={`https://image.thum.io/get/width/1800/noanimate/${p.img}`}
-                  className="w-full h-full object-cover scale-[1.05] group-hover:scale-[1.12] transition duration-700 ease-out grayscale-[10%] group-hover:grayscale-0"
+                  src={`https://image.thum.io/get/width/1800/crop/0/viewport/2000/noanimate/${p.img}`}
+                  className="w-full h-full object-cover object-top scale-[1.03] group-hover:scale-[1.08] transition duration-700 ease-out"
                   loading="lazy"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-70" />
               </div>
 
@@ -145,7 +149,12 @@ export default function Work() {
 
       {/* PROCESS */}
       <section className="relative z-10 py-20 px-6 md:px-16 max-w-7xl mx-auto">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={stagger}
+        >
           <motion.div
             variants={fadeUp}
             className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 mb-4"
