@@ -49,7 +49,7 @@ export default function Work() {
   const { t } = useLanguage();
 
   return (
-    <div className="relative min-h-screen bg-[#0d1424] text-white overflow-x-hidden">
+    <div className="relative min-h-screen bg-[#0d1424] text-white overflow-x-hidden pt-20">
       <CursorGlow />
 
       {/* background blobs */}
@@ -61,7 +61,7 @@ export default function Work() {
       <Navbar />
 
       {/* HEADER */}
-      <section className="relative z-10 pt-40 pb-16 px-6 md:px-16 max-w-7xl mx-auto">
+      <section className="relative z-10 pt-20 pb-12 px-6 md:px-16 max-w-7xl mx-auto">
         <motion.div initial="hidden" animate="visible" variants={stagger}>
           <motion.div
             variants={fadeUp}
@@ -103,15 +103,13 @@ export default function Work() {
               }}
               className="group glass-card rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-300"
             >
-              {/* IMAGE FIXED */}
+              {/* IMAGE FIX */}
               <div className="relative w-full aspect-[16/10] overflow-hidden bg-black/20">
                 <img
                   src={`https://image.thum.io/get/width/1800/noanimate/${p.img}`}
                   className="w-full h-full object-cover scale-[1.05] group-hover:scale-[1.12] transition duration-700 ease-out grayscale-[10%] group-hover:grayscale-0"
                   loading="lazy"
                 />
-
-                {/* depth overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-70" />
               </div>
 
@@ -147,12 +145,7 @@ export default function Work() {
 
       {/* PROCESS */}
       <section className="relative z-10 py-20 px-6 md:px-16 max-w-7xl mx-auto">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={stagger}
-        >
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
           <motion.div
             variants={fadeUp}
             className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 mb-4"
@@ -190,9 +183,7 @@ export default function Work() {
       </section>
 
       <footer className="relative z-10 py-8 text-center text-sm text-muted-foreground border-t border-white/5">
-        <p>
-          © {new Date().getFullYear()} NOVA. {t("footer.text")}
-        </p>
+        <p>© {new Date().getFullYear()} NOVA. {t("footer.text")}</p>
       </footer>
     </div>
   );
