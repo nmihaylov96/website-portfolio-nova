@@ -27,7 +27,6 @@ const projects = [
     desc: "Industrial door systems website.",
     img: "https://www.rolltech-doors.com",
     link: "https://www.rolltech-doors.com",
-    color: "primary",
     stats: ["Speed", "SEO", "UI"],
   },
   {
@@ -35,7 +34,6 @@ const projects = [
     desc: "Personal portfolio system with CMS-like structure.",
     img: "https://www.nikolaymihaylovportfolio.com",
     link: "https://www.nikolaymihaylovportfolio.com",
-    color: "secondary",
     stats: ["Design", "React", "Motion"],
   },
   {
@@ -43,7 +41,6 @@ const projects = [
     desc: "Modern real estate platform with listings.",
     img: "https://elysian-realestates.vercel.app/",
     link: "https://elysian-realestates.vercel.app/",
-    color: "emerald",
     stats: ["Fast UI", "Responsive", "SEO"],
   },
 ];
@@ -55,6 +52,7 @@ export default function Work() {
     <div className="relative min-h-screen bg-[#0d1424] text-white overflow-x-hidden">
       <CursorGlow />
 
+      {/* background blobs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <div className="animated-blob bg-blue-500/10 w-[500px] h-[500px] top-[-80px] left-[-80px]" />
         <div className="animated-blob bg-purple-500/10 w-[400px] h-[400px] top-[40%] right-[-100px]" style={{ animationDelay: "-6s" }} />
@@ -62,25 +60,34 @@ export default function Work() {
 
       <Navbar />
 
-      {/* Header */}
+      {/* HEADER */}
       <section className="relative z-10 pt-40 pb-16 px-6 md:px-16 max-w-7xl mx-auto">
         <motion.div initial="hidden" animate="visible" variants={stagger}>
-          <motion.div variants={fadeUp} className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 mb-5">
+          <motion.div
+            variants={fadeUp}
+            className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 mb-5"
+          >
             <Sparkles className="w-3.5 h-3.5" />
             {t("work.p1.label")}
           </motion.div>
 
-          <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-black text-gradient mb-5">
+          <motion.h1
+            variants={fadeUp}
+            className="text-5xl md:text-7xl font-black text-gradient mb-5"
+          >
             {t("work.title")}
           </motion.h1>
 
-          <motion.p variants={fadeUp} className="text-muted-foreground max-w-xl text-lg">
+          <motion.p
+            variants={fadeUp}
+            className="text-muted-foreground max-w-xl text-lg"
+          >
             {t("work.subtitle")}
           </motion.p>
         </motion.div>
       </section>
 
-      {/* PROJECTS GRID (NEW) */}
+      {/* PROJECTS */}
       <section className="relative z-10 pb-24 px-6 md:px-16 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -96,10 +103,17 @@ export default function Work() {
               }}
               className="group glass-card rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-300"
             >
-              <img
-                src={`https://image.thum.io/get/width/1200/crop/800/noanimate/${p.img}`}
-                className="w-full h-48 object-cover grayscale-[10%] group-hover:grayscale-0 transition"
-              />
+              {/* IMAGE FIXED */}
+              <div className="relative w-full aspect-[16/10] overflow-hidden bg-black/20">
+                <img
+                  src={`https://image.thum.io/get/width/1800/noanimate/${p.img}`}
+                  className="w-full h-full object-cover scale-[1.05] group-hover:scale-[1.12] transition duration-700 ease-out grayscale-[10%] group-hover:grayscale-0"
+                  loading="lazy"
+                />
+
+                {/* depth overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-70" />
+              </div>
 
               <div className="p-6">
                 <h2 className="text-lg font-bold mb-2">{p.title}</h2>
@@ -131,15 +145,26 @@ export default function Work() {
         </div>
       </section>
 
-      {/* Process */}
+      {/* PROCESS */}
       <section className="relative z-10 py-20 px-6 md:px-16 max-w-7xl mx-auto">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-          <motion.div variants={fadeUp} className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 mb-4">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={stagger}
+        >
+          <motion.div
+            variants={fadeUp}
+            className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 mb-4"
+          >
             <Sparkles className="w-3.5 h-3.5" />
             {t("work.process.label")}
           </motion.div>
 
-          <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-black text-gradient mb-14">
+          <motion.h2
+            variants={fadeUp}
+            className="text-3xl md:text-5xl font-black text-gradient mb-14"
+          >
             {t("work.process.title")}
           </motion.h2>
 
@@ -155,7 +180,9 @@ export default function Work() {
               >
                 <div className="text-4xl font-black opacity-30">{s.num}</div>
                 <h3 className="font-bold mt-2">{t(s.titleKey)}</h3>
-                <p className="text-sm text-muted-foreground mt-2">{t(s.descKey)}</p>
+                <p className="text-sm text-muted-foreground mt-2">
+                  {t(s.descKey)}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -163,7 +190,9 @@ export default function Work() {
       </section>
 
       <footer className="relative z-10 py-8 text-center text-sm text-muted-foreground border-t border-white/5">
-        <p>© {new Date().getFullYear()} NOVA. {t("footer.text")}</p>
+        <p>
+          © {new Date().getFullYear()} NOVA. {t("footer.text")}
+        </p>
       </footer>
     </div>
   );
