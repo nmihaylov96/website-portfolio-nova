@@ -25,22 +25,22 @@ const projects = [
   {
     title: "Rolltech Doors",
     desc: "Industrial door systems website.",
-    img: "https://www.rolltech-doors.com",
+    img: "https://www.rolltech-doors.com", // Можеш да го замениш с локален път, напр.: "/projects/rolltech.jpg"
     link: "https://www.rolltech-doors.com",
     stats: ["Speed", "SEO", "UI"],
   },
   {
     title: "Portfolio System",
     desc: "Personal portfolio system with CMS-like structure.",
-    img: "https://www.nikolaymihaylovportfolio.com",
+    img: "https://www.nikolaymihaylovportfolio.com", // или "/projects/portfolio.jpg"
     link: "https://www.nikolaymihaylovportfolio.com",
     stats: ["Design", "React", "Motion"],
   },
   {
     title: "Elysian Real Estates",
     desc: "Modern real estate platform with listings.",
-    img: "https://elysian-realestates.vercel.app/",
-    link: "https://elysian-realestates.vercel.app/",
+    img: "https://elysian-realestates.vercel.app", // или "/projects/elysian.jpg"
+    link: "https://elysian-realestates.vercel.app",
     stats: ["Fast UI", "Responsive", "SEO"],
   },
 ];
@@ -105,19 +105,18 @@ export default function Work() {
               }}
               className="group glass-card rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-300"
             >
-              {/* IMAGE FIXED */}
-              <div className="relative w-full aspect-[16/10] overflow-hidden bg-white/[0.03]">
+              {/* IMAGE WRAPPER */}
+              <div className="relative w-full aspect-[16/10] overflow-hidden bg-white/[0.02]">
                 <img
-                  src={`https://image.thum.io/get/width/1200/crop/0/delay/4/noanimate/https://${p.img.replace(
-                    "https://",
-                    ""
-                  )}${p.img.endsWith('/') ? '' : '/'}?v=3`}
+                  src={
+                    p.img.startsWith("http")
+                      ? `https://image.thum.io/get/maxAge/24/width/1200/crop/0/delay/5/noanimate/${p.img}`
+                      : p.img
+                  }
                   alt={p.title}
                   className="w-full h-full object-cover object-top transition duration-700 ease-out group-hover:scale-[1.03]"
                   loading="lazy"
                 />
-
-                {/* Напълно изчистен и прозрачен слой за максимална яркост */}
                 <div className="absolute inset-0 bg-transparent pointer-events-none" />
               </div>
 
