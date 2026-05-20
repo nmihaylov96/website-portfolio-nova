@@ -93,7 +93,6 @@ export default function Work() {
       {/* PROJECTS */}
       <section className="relative z-10 pb-24 px-6 md:px-16 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
           {projects.map((p, i) => (
             <motion.div
               key={p.title}
@@ -106,11 +105,14 @@ export default function Work() {
               }}
               className="group glass-card rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-300"
             >
-              {/* IMAGE */}
+              {/* IMAGE FIXED */}
               <div className="relative w-full aspect-[16/10] overflow-hidden bg-black/20">
                 <img
-                  src={`https://image.thum.io/get/width/1800/crop/0/viewport/2000/noanimate/${p.img}`}
-                  className="w-full h-full object-cover object-top scale-[1.03] group-hover:scale-[1.08] transition duration-700 ease-out"
+                  src={`https://image.thum.io/get/width/1800/crop/0/noanimate/https://${p.img.replace(
+                    "https://",
+                    ""
+                  )}`}
+                  className="w-full h-full object-cover object-top scale-[1.05] group-hover:scale-[1.1] transition duration-700 ease-out grayscale-[10%] group-hover:grayscale-0"
                   loading="lazy"
                 />
 
@@ -143,7 +145,6 @@ export default function Work() {
               </div>
             </motion.div>
           ))}
-
         </div>
       </section>
 
