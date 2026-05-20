@@ -106,18 +106,19 @@ export default function Work() {
               className="group glass-card rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-300"
             >
               {/* IMAGE FIXED */}
-              <div className="relative w-full aspect-[16/10] overflow-hidden bg-black/5">
+              <div className="relative w-full aspect-[16/10] overflow-hidden bg-white/[0.03]">
                 <img
-                  src={`https://image.thum.io/get/width/1200/crop/0/delay/3/noanimate/https://${p.img.replace(
+                  src={`https://image.thum.io/get/width/1200/crop/0/delay/4/noanimate/https://${p.img.replace(
                     "https://",
                     ""
-                  )}`}
+                  )}${p.img.endsWith('/') ? '' : '/'}?v=3`}
                   alt={p.title}
-                  className="w-full h-full object-cover object-top transition duration-700 ease-out group-hover:scale-[1.05]"
+                  className="w-full h-full object-cover object-top transition duration-700 ease-out group-hover:scale-[1.03]"
                   loading="lazy"
                 />
 
-                <div className="absolute inset-0 bg-black/[0.02] group-hover:bg-transparent transition duration-300" />
+                {/* Напълно изчистен и прозрачен слой за максимална яркост */}
+                <div className="absolute inset-0 bg-transparent pointer-events-none" />
               </div>
 
               <div className="p-6">
