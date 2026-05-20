@@ -106,17 +106,18 @@ export default function Work() {
               className="group glass-card rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-300"
             >
               {/* IMAGE FIXED */}
-              <div className="relative w-full aspect-[16/10] overflow-hidden bg-black/20">
+              <div className="relative w-full aspect-[16/10] overflow-hidden bg-black/5">
                 <img
-                  src={`https://image.thum.io/get/width/1800/crop/0/noanimate/https://${p.img.replace(
+                  src={`https://image.thum.io/get/width/1200/crop/0/delay/3/noanimate/https://${p.img.replace(
                     "https://",
                     ""
                   )}`}
-                  className="w-full h-full object-cover object-top scale-[1.05] group-hover:scale-[1.1] transition duration-700 ease-out grayscale-[10%] group-hover:grayscale-0"
+                  alt={p.title}
+                  className="w-full h-full object-cover object-top transition duration-700 ease-out group-hover:scale-[1.05]"
                   loading="lazy"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-70" />
+                <div className="absolute inset-0 bg-black/[0.02] group-hover:bg-transparent transition duration-300" />
               </div>
 
               <div className="p-6">
